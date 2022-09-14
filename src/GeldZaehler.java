@@ -1,5 +1,4 @@
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -30,20 +29,20 @@ public class GeldZaehler {
         }
         System.out.printf("%.2f Euro eingezahlt%n", this.geldEingegangen);
     }
-    public boolean kaffeKaufen(double preis){
+    public boolean kaffeeKaufen(double preis){
         this.geldZaehlen();
         if(this.geldEingegangen < preis){
             System.out.println("Nicht genug Geld eingezahlt!");
             return false;
         }
         else{
-            this.profit += preis;
             return true;
         }
     }
     public void rueckgeld(boolean gekauft, double preis){
         double rueckgeld;
         if(gekauft){
+            this.profit += preis;
             rueckgeld = this.geldEingegangen - preis;
         }
         else{
