@@ -26,6 +26,9 @@ public class Menu {
         for(MenuItem item : menu){
             optionen += "|";
             optionen += item.name;
+            optionen += " ";
+            optionen += item.preis;
+            optionen += " Euro";
         }
         optionen += "|";
         return optionen;

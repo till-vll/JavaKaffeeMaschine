@@ -1,9 +1,10 @@
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 public class GeldZaehler {
-    HashMap<String, Double> muenzen = new HashMap<>();
+    LinkedHashMap<String, Double> muenzen = new LinkedHashMap<>();
     double profit = 0;
     double geldEingegangen = 0;
     public GeldZaehler(){
