@@ -5,12 +5,12 @@ import java.util.Map;
 
 public class KaffeeMaschine {
 
-    HashMap<String, Integer> vorrat = new HashMap<>();
+    private HashMap<String, Integer> vorrat = new HashMap<>();
     public KaffeeMaschine(){
         vorrat.put("Wasser",300);
         vorrat.put("Milch",200);
         vorrat.put("Kaffee",100);
-        
+
     }
 
 
@@ -19,7 +19,7 @@ public class KaffeeMaschine {
         System.out.printf("Milch: %d ml%n",this.vorrat.get("Milch"));
         System.out.printf("Kaffee: %d g%n",this.vorrat.get("Kaffee"));
     }
-    
+
     public boolean checkZutaten(Menu.@NotNull MenuItem kaffee){
         boolean genug = true;
         for (Map.Entry<String, Integer> zutat: kaffee.zutaten.entrySet()

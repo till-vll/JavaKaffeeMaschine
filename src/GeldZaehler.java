@@ -3,9 +3,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 public class GeldZaehler {
-    LinkedHashMap<String, Double> muenzen = new LinkedHashMap<>();
-    double profit = 0;
-    double geldEingegangen = 0;
+
+    //TODO Alle Variablen standardmäßig auf private stellen, wenn du auf sie in einer anderen Klasse zugreifen musst
+    // erstelle dafür Getter/Setter nach bedarf. Mit ALT+Einfg kannst du dir Setter, Getter und Constructoren uvm. generieren lassen.
+    private LinkedHashMap<String, Double> muenzen = new LinkedHashMap<>();
+    private double profit = 0;
+    private double geldEingegangen = 0;
     public GeldZaehler(){
         muenzen.put("1 Cent",0.01);
         muenzen.put("5 Cent",0.05);
@@ -18,6 +21,8 @@ public class GeldZaehler {
     public void bericht(){
         System.out.printf("%.2f Euro Profit!%n",this.profit);
     }
+
+    //TODO: Achtung Methode ist nicht Typensicher. Was passiert, wenn keine Zahl eingegeben wird, sondern ein String?
     public void geldZaehlen(){
         System.out.println("Bitte geben sie ihr Geld ein!");
         Scanner input = new Scanner(System.in);

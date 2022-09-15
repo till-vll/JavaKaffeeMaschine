@@ -27,3 +27,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Die .gitignore immer so anpassen, dass nur das im GIT landet, was auch wirklich benötigt wird. In diesem Fall ist der .idea Ordner und die .iml Dateien unwichtig
+### Intellij Bullshit that can go ###
+.idea
+*iml
